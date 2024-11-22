@@ -20,30 +20,30 @@ const MovieReviews= lazy(() => import("./components/MovieReviews/MovieReviews"))
 const HomePage = lazy(() => import("./pages/HomePage"))
 
 function App() {
-  const [films, setFilms] = useState([]);
-  const [status, setStatus] = useState();
+  // const [films, setFilms] = useState([]);
+  // const [status, setStatus] = useState();
 
-  useEffect(() => {
-    async function getFilms() {
-      try {
-        const data = await fetchFilmGallery();
-        setFilms(data.results);
-        console.log("РЕЗУЛЬТАТ:", data.results);
-      } catch (error) {
-        setStatus(error.response ? error.response.status : "No response");
-      }
-    }
+  // useEffect(() => {
+  //   async function getFilms() {
+  //     try {
+  //       const data = await fetchFilmGallery();
+  //       setFilms(data.results);
+  //       console.log("РЕЗУЛЬТАТ:", data.results);
+  //     } catch (error) {
+  //       setStatus(error.response ? error.response.status : "No response");
+  //     }
+  //   }
 
-    getFilms();
-  }, []);
+  //   getFilms();
+  // }, []);
 
   return (
     <>
       <Navigation />
       <Suspense fallback={"Loading....."}>
         <Routes>
-          <Route path="/" element={<HomePage films={films} />} />
-          <Route path="/movies" element={<MoviesPage films={films} />} />
+          <Route path="/" element={<HomePage/>} />
+          <Route path="/movies" element={<MoviesPage/>} />
           <Route path="/movies/:movieId" element={<MovieDetailsPage />}>
             <Route path="Cast" element={<MovieCast />} />
             <Route path="Reviews" element={<MovieReviews />} />

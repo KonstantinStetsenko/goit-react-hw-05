@@ -10,9 +10,8 @@ import { fetchFilmGalleryById } from "../../services/filmGallery-API";
 import css from "./MovieDetailsPage.module.css";
 import clsx from "clsx";
 import { Suspense } from "react";
-import Container from "./../../Container/Container"
-
-
+import Container from "./../../Container/Container";
+import { FaLongArrowAltLeft } from "react-icons/fa";
 const buildLinkClass = ({ isActive }) => {
   return clsx(css.link, isActive && css.active);
 };
@@ -21,7 +20,7 @@ export default function MovieDetailsPage() {
   const { movieId } = useParams();
   const [filmID, setFilmID] = useState(null);
   const location = useLocation();
-  console.log(location);
+
   const goBackLink = useRef(location.state ?? "/movies");
 
   useEffect(() => {
@@ -41,7 +40,7 @@ export default function MovieDetailsPage() {
     "https://dummyimage.com/400x600/cdcdcd/000.jpg&text=No+poster";
   return (
     <Container>
-      <Link to={goBackLink.current}>Go Back</Link>
+      <Link className={ css.linkGoBack} to={goBackLink.current}>< FaLongArrowAltLeft className={ css.linkGoBackIcon} />Go Back</Link>
 
       <div className={css.containerFilm}>
         <img
