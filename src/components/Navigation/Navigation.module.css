@@ -1,0 +1,25 @@
+.header {
+  width: 100%;
+  height: 60px;
+  align-content: center;
+  margin: 0px;
+  background-color: black;
+  position: sticky;
+  top: 0;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-left: 40px;
+}
+.navList {
+  color: white;
+}
+.navList:hover {
+  color: rgb(151, 151, 151);
+}
+.active {
+  text-decoration: underline;
+  color: white;
+}

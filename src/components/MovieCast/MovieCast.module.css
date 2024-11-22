@@ -1,0 +1,25 @@
+.ListCast {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style-type: none;
+}
+.listCast {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(217, 217, 217);
+  height: 280px;
+  justify-content: space-around;
+  align-items: center;
+}
+.photoArtists {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2px;
+  width: 150px;
+}
+.titleName {
+  font-size: 15px;
+  font-weight: 500;
+}
