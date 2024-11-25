@@ -5,12 +5,7 @@ import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
 import Navigation from "./components/Navigation/Navigation";
-// import MoviesPage from "./pages/MoviesPage";
-// import NotFoundPage from "./pages/NotFoundPage";
-// import MovieDetailsPage from "./pages/MovieDetailsPage";
-// import MovieCast from "./components/MovieCast/MovieCast";
-// import MovieReviews from "./components/MovieReviews/MovieReviews";
-// import HomePage from "./pages/HomePage";
+
 
 const MoviesPage = lazy(() => import("./pages/MoviesPage"))
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"))
@@ -20,22 +15,6 @@ const MovieReviews= lazy(() => import("./components/MovieReviews/MovieReviews"))
 const HomePage = lazy(() => import("./pages/HomePage"))
 
 function App() {
-  // const [films, setFilms] = useState([]);
-  // const [status, setStatus] = useState();
-
-  // useEffect(() => {
-  //   async function getFilms() {
-  //     try {
-  //       const data = await fetchFilmGallery();
-  //       setFilms(data.results);
-  //       console.log("РЕЗУЛЬТАТ:", data.results);
-  //     } catch (error) {
-  //       setStatus(error.response ? error.response.status : "No response");
-  //     }
-  //   }
-
-  //   getFilms();
-  // }, []);
 
   return (
     <>
